@@ -1,0 +1,477 @@
+﻿<Activity mc:Ignorable="sap sap2010 sads" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="Main_1"
+ xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
+ xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+ xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities"
+ xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger"
+ xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation"
+ xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation"
+ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
+ xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib"
+ xmlns:ui="http://schemas.uipath.com/workflow/activities"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Core</AssemblyReference>
+      <AssemblyReference>UiPath.Core.Activities</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Flowchart sap2010:Annotation.AnnotationText="Usage: 1. Set the voice command and workflow file in Variables.&#xA;             2. Run.&#xA;             3. Say &quot;Hey Cortana, launch [voice command].&quot;" DisplayName="FlowchartMain" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+    <Flowchart.Variables>
+      <Variable x:TypeArguments="x:String" Default="my Bitcoin reporting robot" Name="command1" />
+      <Variable x:TypeArguments="x:String" Default="C:\Users\John\Documents\UiPath\BitcoinReportingRobot\BitcoinReportingRobotWorkflow.xaml" Name="workflow1" />
+      <Variable x:TypeArguments="x:String" Name="command2" />
+      <Variable x:TypeArguments="x:String" Name="workflow2" />
+      <Variable x:TypeArguments="x:String" Name="command3" />
+      <Variable x:TypeArguments="x:String" Name="workflow3" />
+      <Variable x:TypeArguments="x:String" Name="command4" />
+      <Variable x:TypeArguments="x:String" Name="workflow4" />
+      <Variable x:TypeArguments="x:String" Name="command5" />
+      <Variable x:TypeArguments="x:String" Name="workflow5" />
+      <Variable x:TypeArguments="x:String" Name="command6" />
+      <Variable x:TypeArguments="x:String" Name="workflow6" />
+      <Variable x:TypeArguments="x:String" Name="command7" />
+      <Variable x:TypeArguments="x:String" Name="workflow7" />
+      <Variable x:TypeArguments="x:String" Name="command8" />
+      <Variable x:TypeArguments="x:String" Name="workflow8" />
+      <Variable x:TypeArguments="x:String" Name="command9" />
+      <Variable x:TypeArguments="x:String" Name="workflow9" />
+      <Variable x:TypeArguments="x:String" Name="command10" />
+      <Variable x:TypeArguments="x:String" Name="workflow10" />
+    </Flowchart.Variables>
+    <Flowchart.StartNode>
+      <FlowStep x:Name="__ReferenceID0" sap2010:WorkflowViewState.IdRef="FlowStep_22">
+        <Parallel DisplayName="ParallelVoiceCommands" sap2010:WorkflowViewState.IdRef="Parallel_2">
+          <ui:OnUiElementAppear FoundElement="{x:Null}" ContinueOnError="True" DisplayName="On Element Appear 'MicrosoftEdge.exe Micro...'" sap2010:WorkflowViewState.IdRef="OnUiElementAppear_10" RepeatForever="True" WaitActive="False" WaitVisible="False">
+            <ui:OnUiElementAppear.Body>
+              <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke workflow file" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="[workflow1]">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                  </ui:InvokeWorkflowFile.Arguments>
+                </ui:InvokeWorkflowFile>
+                <ui:CloseApplication ContinueOnError="True" DisplayName="Close application" sap2010:WorkflowViewState.IdRef="CloseApplication_4">
+                  <ui:CloseApplication.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="[&quot;&lt;wnd app='applicationframehost.exe' title='launch &quot; + command1 + &quot; - Bing ‎- Microsoft Edge' /&gt;&lt;wnd cls='Windows.UI.Core.CoreWindow' title='Microsoft Edge' /&gt;&quot;]" TimeoutMS="1" WaitForReady="INTERACTIVE" />
+                  </ui:CloseApplication.Target>
+                </ui:CloseApplication>
+              </Sequence>
+            </ui:OnUiElementAppear.Body>
+            <ui:OnUiElementAppear.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" Selector="[&quot;&lt;wnd app='applicationframehost.exe' title='launch &quot; + command1 + &quot; - Bing ‎- Microsoft Edge' /&gt;&lt;wnd cls='Windows.UI.Core.CoreWindow' title='Microsoft Edge' /&gt;&quot;]" WaitForReady="INTERACTIVE" />
+            </ui:OnUiElementAppear.Target>
+          </ui:OnUiElementAppear>
+          <ui:OnUiElementAppear FoundElement="{x:Null}" ContinueOnError="True" DisplayName="On Element Appear 'MicrosoftEdge.exe Micro...'" sap2010:WorkflowViewState.IdRef="OnUiElementAppear_13" RepeatForever="True" WaitActive="False" WaitVisible="False">
+            <ui:OnUiElementAppear.Body>
+              <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke workflow file" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="[workflow2]">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                  </ui:InvokeWorkflowFile.Arguments>
+                </ui:InvokeWorkflowFile>
+                <ui:CloseApplication ContinueOnError="True" DisplayName="Close application" sap2010:WorkflowViewState.IdRef="CloseApplication_5">
+                  <ui:CloseApplication.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="[&quot;&lt;wnd app='applicationframehost.exe' title='launch &quot; + command2 + &quot; - Bing ‎- Microsoft Edge' /&gt;&lt;wnd cls='Windows.UI.Core.CoreWindow' title='Microsoft Edge' /&gt;&quot;]" TimeoutMS="1" WaitForReady="INTERACTIVE" />
+                  </ui:CloseApplication.Target>
+                </ui:CloseApplication>
+              </Sequence>
+            </ui:OnUiElementAppear.Body>
+            <ui:OnUiElementAppear.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" Selector="[&quot;&lt;wnd app='applicationframehost.exe' title='launch &quot; + command2 + &quot; - Bing ‎- Microsoft Edge' /&gt;&lt;wnd cls='Windows.UI.Core.CoreWindow' title='Microsoft Edge' /&gt;&quot;]" WaitForReady="INTERACTIVE" />
+            </ui:OnUiElementAppear.Target>
+          </ui:OnUiElementAppear>
+          <ui:OnUiElementAppear FoundElement="{x:Null}" ContinueOnError="True" DisplayName="On Element Appear 'MicrosoftEdge.exe Micro...'" sap2010:WorkflowViewState.IdRef="OnUiElementAppear_14" RepeatForever="True" WaitActive="False" WaitVisible="False">
+            <ui:OnUiElementAppear.Body>
+              <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke workflow file" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="[workflow3]">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                  </ui:InvokeWorkflowFile.Arguments>
+                </ui:InvokeWorkflowFile>
+                <ui:CloseApplication ContinueOnError="True" DisplayName="Close application" sap2010:WorkflowViewState.IdRef="CloseApplication_6">
+                  <ui:CloseApplication.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="[&quot;&lt;wnd app='applicationframehost.exe' title='launch &quot; + command3 + &quot; - Bing ‎- Microsoft Edge' /&gt;&lt;wnd cls='Windows.UI.Core.CoreWindow' title='Microsoft Edge' /&gt;&quot;]" TimeoutMS="1" WaitForReady="INTERACTIVE" />
+                  </ui:CloseApplication.Target>
+                </ui:CloseApplication>
+              </Sequence>
+            </ui:OnUiElementAppear.Body>
+            <ui:OnUiElementAppear.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" Selector="[&quot;&lt;wnd app='applicationframehost.exe' title='launch &quot; + command3 + &quot; - Bing ‎- Microsoft Edge' /&gt;&lt;wnd cls='Windows.UI.Core.CoreWindow' title='Microsoft Edge' /&gt;&quot;]" WaitForReady="INTERACTIVE" />
+            </ui:OnUiElementAppear.Target>
+          </ui:OnUiElementAppear>
+          <ui:OnUiElementAppear FoundElement="{x:Null}" ContinueOnError="True" DisplayName="On Element Appear 'MicrosoftEdge.exe Micro...'" sap2010:WorkflowViewState.IdRef="OnUiElementAppear_15" RepeatForever="True" WaitActive="False" WaitVisible="False">
+            <ui:OnUiElementAppear.Body>
+              <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke workflow file" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="[workflow4]">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                  </ui:InvokeWorkflowFile.Arguments>
+                </ui:InvokeWorkflowFile>
+                <ui:CloseApplication ContinueOnError="True" DisplayName="Close application" sap2010:WorkflowViewState.IdRef="CloseApplication_7">
+                  <ui:CloseApplication.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="[&quot;&lt;wnd app='applicationframehost.exe' title='launch &quot; + command4 + &quot; - Bing ‎- Microsoft Edge' /&gt;&lt;wnd cls='Windows.UI.Core.CoreWindow' title='Microsoft Edge' /&gt;&quot;]" TimeoutMS="1" WaitForReady="INTERACTIVE" />
+                  </ui:CloseApplication.Target>
+                </ui:CloseApplication>
+              </Sequence>
+            </ui:OnUiElementAppear.Body>
+            <ui:OnUiElementAppear.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" Selector="[&quot;&lt;wnd app='applicationframehost.exe' title='launch &quot; + command4 + &quot; - Bing ‎- Microsoft Edge' /&gt;&lt;wnd cls='Windows.UI.Core.CoreWindow' title='Microsoft Edge' /&gt;&quot;]" WaitForReady="INTERACTIVE" />
+            </ui:OnUiElementAppear.Target>
+          </ui:OnUiElementAppear>
+          <ui:OnUiElementAppear FoundElement="{x:Null}" ContinueOnError="True" DisplayName="On Element Appear 'MicrosoftEdge.exe Micro...'" sap2010:WorkflowViewState.IdRef="OnUiElementAppear_16" RepeatForever="True" WaitActive="False" WaitVisible="False">
+            <ui:OnUiElementAppear.Body>
+              <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke workflow file" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="[workflow5]">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                  </ui:InvokeWorkflowFile.Arguments>
+                </ui:InvokeWorkflowFile>
+                <ui:CloseApplication ContinueOnError="True" DisplayName="Close application" sap2010:WorkflowViewState.IdRef="CloseApplication_8">
+                  <ui:CloseApplication.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="[&quot;&lt;wnd app='applicationframehost.exe' title='launch &quot; + command5 + &quot; - Bing ‎- Microsoft Edge' /&gt;&lt;wnd cls='Windows.UI.Core.CoreWindow' title='Microsoft Edge' /&gt;&quot;]" TimeoutMS="1" WaitForReady="INTERACTIVE" />
+                  </ui:CloseApplication.Target>
+                </ui:CloseApplication>
+              </Sequence>
+            </ui:OnUiElementAppear.Body>
+            <ui:OnUiElementAppear.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" Selector="[&quot;&lt;wnd app='applicationframehost.exe' title='launch &quot; + command5 + &quot; - Bing ‎- Microsoft Edge' /&gt;&lt;wnd cls='Windows.UI.Core.CoreWindow' title='Microsoft Edge' /&gt;&quot;]" WaitForReady="INTERACTIVE" />
+            </ui:OnUiElementAppear.Target>
+          </ui:OnUiElementAppear>
+          <ui:OnUiElementAppear FoundElement="{x:Null}" ContinueOnError="True" DisplayName="On Element Appear 'MicrosoftEdge.exe Micro...'" sap2010:WorkflowViewState.IdRef="OnUiElementAppear_17" RepeatForever="True" WaitActive="False" WaitVisible="False">
+            <ui:OnUiElementAppear.Body>
+              <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke workflow file" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="[workflow6]">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                  </ui:InvokeWorkflowFile.Arguments>
+                </ui:InvokeWorkflowFile>
+                <ui:CloseApplication ContinueOnError="True" DisplayName="Close application" sap2010:WorkflowViewState.IdRef="CloseApplication_9">
+                  <ui:CloseApplication.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="[&quot;&lt;wnd app='applicationframehost.exe' title='launch &quot; + command6 + &quot; - Bing ‎- Microsoft Edge' /&gt;&lt;wnd cls='Windows.UI.Core.CoreWindow' title='Microsoft Edge' /&gt;&quot;]" TimeoutMS="1" WaitForReady="INTERACTIVE" />
+                  </ui:CloseApplication.Target>
+                </ui:CloseApplication>
+              </Sequence>
+            </ui:OnUiElementAppear.Body>
+            <ui:OnUiElementAppear.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" Selector="[&quot;&lt;wnd app='applicationframehost.exe' title='launch &quot; + command6 + &quot; - Bing ‎- Microsoft Edge' /&gt;&lt;wnd cls='Windows.UI.Core.CoreWindow' title='Microsoft Edge' /&gt;&quot;]" WaitForReady="INTERACTIVE" />
+            </ui:OnUiElementAppear.Target>
+          </ui:OnUiElementAppear>
+          <ui:OnUiElementAppear FoundElement="{x:Null}" ContinueOnError="True" DisplayName="On Element Appear 'MicrosoftEdge.exe Micro...'" sap2010:WorkflowViewState.IdRef="OnUiElementAppear_18" RepeatForever="True" WaitActive="False" WaitVisible="False">
+            <ui:OnUiElementAppear.Body>
+              <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke workflow file" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_10" UnSafe="False" WorkflowFileName="[workflow7]">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                  </ui:InvokeWorkflowFile.Arguments>
+                </ui:InvokeWorkflowFile>
+                <ui:CloseApplication ContinueOnError="True" DisplayName="Close application" sap2010:WorkflowViewState.IdRef="CloseApplication_10">
+                  <ui:CloseApplication.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="[&quot;&lt;wnd app='applicationframehost.exe' title='launch &quot; + command7 + &quot; - Bing ‎- Microsoft Edge' /&gt;&lt;wnd cls='Windows.UI.Core.CoreWindow' title='Microsoft Edge' /&gt;&quot;]" TimeoutMS="1" WaitForReady="INTERACTIVE" />
+                  </ui:CloseApplication.Target>
+                </ui:CloseApplication>
+              </Sequence>
+            </ui:OnUiElementAppear.Body>
+            <ui:OnUiElementAppear.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" Selector="[&quot;&lt;wnd app='applicationframehost.exe' title='launch &quot; + command7 + &quot; - Bing ‎- Microsoft Edge' /&gt;&lt;wnd cls='Windows.UI.Core.CoreWindow' title='Microsoft Edge' /&gt;&quot;]" WaitForReady="INTERACTIVE" />
+            </ui:OnUiElementAppear.Target>
+          </ui:OnUiElementAppear>
+          <ui:OnUiElementAppear FoundElement="{x:Null}" ContinueOnError="True" DisplayName="On Element Appear 'MicrosoftEdge.exe Micro...'" sap2010:WorkflowViewState.IdRef="OnUiElementAppear_19" RepeatForever="True" WaitActive="False" WaitVisible="False">
+            <ui:OnUiElementAppear.Body>
+              <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke workflow file" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_11" UnSafe="False" WorkflowFileName="[workflow8]">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                  </ui:InvokeWorkflowFile.Arguments>
+                </ui:InvokeWorkflowFile>
+                <ui:CloseApplication ContinueOnError="True" DisplayName="Close application" sap2010:WorkflowViewState.IdRef="CloseApplication_11">
+                  <ui:CloseApplication.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="[&quot;&lt;wnd app='applicationframehost.exe' title='launch &quot; + command8 + &quot; - Bing ‎- Microsoft Edge' /&gt;&lt;wnd cls='Windows.UI.Core.CoreWindow' title='Microsoft Edge' /&gt;&quot;]" TimeoutMS="1" WaitForReady="INTERACTIVE" />
+                  </ui:CloseApplication.Target>
+                </ui:CloseApplication>
+              </Sequence>
+            </ui:OnUiElementAppear.Body>
+            <ui:OnUiElementAppear.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" Selector="[&quot;&lt;wnd app='applicationframehost.exe' title='launch &quot; + command8 + &quot; - Bing ‎- Microsoft Edge' /&gt;&lt;wnd cls='Windows.UI.Core.CoreWindow' title='Microsoft Edge' /&gt;&quot;]" WaitForReady="INTERACTIVE" />
+            </ui:OnUiElementAppear.Target>
+          </ui:OnUiElementAppear>
+          <ui:OnUiElementAppear FoundElement="{x:Null}" ContinueOnError="True" DisplayName="On Element Appear 'MicrosoftEdge.exe Micro...'" sap2010:WorkflowViewState.IdRef="OnUiElementAppear_20" RepeatForever="True" WaitActive="False" WaitVisible="False">
+            <ui:OnUiElementAppear.Body>
+              <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_26">
+                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke workflow file" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_12" UnSafe="False" WorkflowFileName="[workflow9]">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                  </ui:InvokeWorkflowFile.Arguments>
+                </ui:InvokeWorkflowFile>
+                <ui:CloseApplication ContinueOnError="True" DisplayName="Close application" sap2010:WorkflowViewState.IdRef="CloseApplication_12">
+                  <ui:CloseApplication.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="[&quot;&lt;wnd app='applicationframehost.exe' title='launch &quot; + command9 + &quot; - Bing ‎- Microsoft Edge' /&gt;&lt;wnd cls='Windows.UI.Core.CoreWindow' title='Microsoft Edge' /&gt;&quot;]" TimeoutMS="1" WaitForReady="INTERACTIVE" />
+                  </ui:CloseApplication.Target>
+                </ui:CloseApplication>
+              </Sequence>
+            </ui:OnUiElementAppear.Body>
+            <ui:OnUiElementAppear.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" Selector="[&quot;&lt;wnd app='applicationframehost.exe' title='launch &quot; + command9 + &quot; - Bing ‎- Microsoft Edge' /&gt;&lt;wnd cls='Windows.UI.Core.CoreWindow' title='Microsoft Edge' /&gt;&quot;]" WaitForReady="INTERACTIVE" />
+            </ui:OnUiElementAppear.Target>
+          </ui:OnUiElementAppear>
+          <ui:OnUiElementAppear FoundElement="{x:Null}" ContinueOnError="True" DisplayName="On Element Appear 'MicrosoftEdge.exe Micro...'" sap2010:WorkflowViewState.IdRef="OnUiElementAppear_21" RepeatForever="True" WaitActive="False" WaitVisible="False">
+            <ui:OnUiElementAppear.Body>
+              <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_27">
+                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke workflow file" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_13" UnSafe="False" WorkflowFileName="[workflow10]">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                  </ui:InvokeWorkflowFile.Arguments>
+                </ui:InvokeWorkflowFile>
+                <ui:CloseApplication ContinueOnError="True" DisplayName="Close application" sap2010:WorkflowViewState.IdRef="CloseApplication_13">
+                  <ui:CloseApplication.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="[&quot;&lt;wnd app='applicationframehost.exe' title='launch &quot; + command10 + &quot; - Bing ‎- Microsoft Edge' /&gt;&lt;wnd cls='Windows.UI.Core.CoreWindow' title='Microsoft Edge' /&gt;&quot;]" TimeoutMS="1" WaitForReady="INTERACTIVE" />
+                  </ui:CloseApplication.Target>
+                </ui:CloseApplication>
+              </Sequence>
+            </ui:OnUiElementAppear.Body>
+            <ui:OnUiElementAppear.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" Selector="[&quot;&lt;wnd app='applicationframehost.exe' title='launch &quot; + command10 + &quot; - Bing ‎- Microsoft Edge' /&gt;&lt;wnd cls='Windows.UI.Core.CoreWindow' title='Microsoft Edge' /&gt;&quot;]" WaitForReady="INTERACTIVE" />
+            </ui:OnUiElementAppear.Target>
+          </ui:OnUiElementAppear>
+        </Parallel>
+        <FlowStep.Next>
+          <x:Reference>__ReferenceID0</x:Reference>
+        </FlowStep.Next>
+      </FlowStep>
+    </Flowchart.StartNode>
+    <x:Reference>__ReferenceID0</x:Reference>
+    <sads:DebugSymbol.Symbol>dy1DOlxVc2Vyc1xKb2huXERvY3VtZW50c1xVaVBhdGhcVkFBRlxNYWluLnhhbWxyPAOcAg8CAQE+ND5QAgEDPzQ/jQECAQJVCZQCFAIBBFYLaCIDAYMBaQt7IgIBdXwLjgEiAgFnjwELoQEiAgFZogELtAEiAgFLtQELxwEiAgE9yAEL2gEiAgEv2wEL7QEiAgEh7gELgAIiAgETgQILkwIiAgEFVklWTwMBhAFYD2MaAwGIAVbSAVbYAQMBhQFmZWapAgMBhgFpSWlPAgF2aw92GgIBemnSAWnYAQIBd3lleakCAgF4fEl8TwIBaH4PiQEaAgFsfNIBfNgBAgFpjAFljAGpAgIBao8BSY8BTwIBWpEBD5wBGgIBXo8B0gGPAdgBAgFbnwFlnwGpAgIBXKIBSaIBTwIBTKQBD68BGgIBUKIB0gGiAdgBAgFNsgFlsgGpAgIBTrUBSbUBTwIBPrcBD8IBGgIBQrUB0gG1AdgBAgE/xQFlxQGpAgIBQMgBScgBTwIBMMoBD9UBGgIBNMgB0gHIAdgBAgEx2AFl2AGpAgIBMtsBSdsBTwIBIt0BD+gBGgIBJtsB0gHbAdgBAgEj6wFl6wGpAgIBJO4BSe4BTwIBFPABD/sBGgIBGO4B0gHuAdgBAgEV/gFl/gGpAgIBFoECSYECTwIBBoMCD44CGgIBCoEC0gGBAtgBAgEHkQJlkQKqAgIBCFkRXSkDAY4BXhFiJwMBiQFsEXApAwGAAXERdScCAXt/EYMBKQIBcoQBEYgBJwIBbZIBEZYBKQIBZJcBEZsBJwIBX6UBEakBKQIBVqoBEa4BJwIBUbgBEbwBKQIBSL0BEcEBJwIBQ8sBEc8BKQIBOtABEdQBJwIBNd4BEeIBKQIBLOMBEecBJwIBJ/EBEfUBKQIBHvYBEfoBJwIBGYQCEYgCKQIBEIkCEY0CJwIBC1m9AVnKAQMBjwFgVmCaAgMBjAFgpQJgqAIDAYsBXjZePAMBigFsvQFsygEDAYEBc1ZzmgICAX5zpQJzqAICAX1xNnE8AgF8f70Bf8oBAgFzhgFWhgGaAgIBcIYBpQKGAagCAgFvhAE2hAE8AgFukgG9AZIBygECAWWZAVaZAZoCAgFimQGlApkBqAICAWGXATaXATwCAWClAb0BpQHKAQIBV6wBVqwBmgICAVSsAaUCrAGoAgIBU6oBNqoBPAIBUrgBvQG4AcoBAgFJvwFWvwGaAgIBRr8BpQK/AagCAgFFvQE2vQE8AgFEywG+AcsBywECATvSAVbSAZoCAgE40gGlAtIBqAICATfQATbQATwCATbeAb4B3gHLAQIBLeUBVuUBmgICASrlAaUC5QGoAgIBKeMBNuMBPAIBKPEBvgHxAcsBAgEf+AFW+AGaAgIBHPgBpQL4AagCAgEb9gE29gE8AgEahAK+AYQCzAECARGLAlaLApsCAgEOiwKmAosCqQICAQ2JAjaJAjwCAQw=</sads:DebugSymbol.Symbol>
+  </Flowchart>
+  <sap2010:WorkflowViewState.ViewStateManager>
+    <sap2010:ViewStateManager>
+      <sap2010:ViewStateData Id="InvokeWorkflowFile_4" sap:VirtualizedContainerService.HintSize="314,87" />
+      <sap2010:ViewStateData Id="CloseApplication_4" sap:VirtualizedContainerService.HintSize="314,68" />
+      <sap2010:ViewStateData Id="Sequence_18" sap:VirtualizedContainerService.HintSize="336,319">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="OnUiElementAppear_10" sap:VirtualizedContainerService.HintSize="414,427">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="InvokeWorkflowFile_5" sap:VirtualizedContainerService.HintSize="314,87" />
+      <sap2010:ViewStateData Id="CloseApplication_5" sap:VirtualizedContainerService.HintSize="314,68" />
+      <sap2010:ViewStateData Id="Sequence_19" sap:VirtualizedContainerService.HintSize="336,319">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="OnUiElementAppear_13" sap:VirtualizedContainerService.HintSize="414,427">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="InvokeWorkflowFile_6" sap:VirtualizedContainerService.HintSize="314,87" />
+      <sap2010:ViewStateData Id="CloseApplication_6" sap:VirtualizedContainerService.HintSize="314,68" />
+      <sap2010:ViewStateData Id="Sequence_20" sap:VirtualizedContainerService.HintSize="336,319">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="OnUiElementAppear_14" sap:VirtualizedContainerService.HintSize="414,427">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="InvokeWorkflowFile_7" sap:VirtualizedContainerService.HintSize="314,87" />
+      <sap2010:ViewStateData Id="CloseApplication_7" sap:VirtualizedContainerService.HintSize="314,68" />
+      <sap2010:ViewStateData Id="Sequence_21" sap:VirtualizedContainerService.HintSize="336,319">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="OnUiElementAppear_15" sap:VirtualizedContainerService.HintSize="414,427">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="InvokeWorkflowFile_8" sap:VirtualizedContainerService.HintSize="314,87" />
+      <sap2010:ViewStateData Id="CloseApplication_8" sap:VirtualizedContainerService.HintSize="314,68" />
+      <sap2010:ViewStateData Id="Sequence_22" sap:VirtualizedContainerService.HintSize="336,319">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="OnUiElementAppear_16" sap:VirtualizedContainerService.HintSize="414,427">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="InvokeWorkflowFile_9" sap:VirtualizedContainerService.HintSize="314,87" />
+      <sap2010:ViewStateData Id="CloseApplication_9" sap:VirtualizedContainerService.HintSize="314,68" />
+      <sap2010:ViewStateData Id="Sequence_23" sap:VirtualizedContainerService.HintSize="336,319">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="OnUiElementAppear_17" sap:VirtualizedContainerService.HintSize="414,427">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="InvokeWorkflowFile_10" sap:VirtualizedContainerService.HintSize="314,87" />
+      <sap2010:ViewStateData Id="CloseApplication_10" sap:VirtualizedContainerService.HintSize="314,68" />
+      <sap2010:ViewStateData Id="Sequence_24" sap:VirtualizedContainerService.HintSize="336,319">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="OnUiElementAppear_18" sap:VirtualizedContainerService.HintSize="414,427">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="InvokeWorkflowFile_11" sap:VirtualizedContainerService.HintSize="314,87" />
+      <sap2010:ViewStateData Id="CloseApplication_11" sap:VirtualizedContainerService.HintSize="314,68" />
+      <sap2010:ViewStateData Id="Sequence_25" sap:VirtualizedContainerService.HintSize="336,319">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="OnUiElementAppear_19" sap:VirtualizedContainerService.HintSize="414,427">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="InvokeWorkflowFile_12" sap:VirtualizedContainerService.HintSize="314,87" />
+      <sap2010:ViewStateData Id="CloseApplication_12" sap:VirtualizedContainerService.HintSize="314,68" />
+      <sap2010:ViewStateData Id="Sequence_26" sap:VirtualizedContainerService.HintSize="336,319">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="OnUiElementAppear_20" sap:VirtualizedContainerService.HintSize="414,427">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="InvokeWorkflowFile_13" sap:VirtualizedContainerService.HintSize="314,87" />
+      <sap2010:ViewStateData Id="CloseApplication_13" sap:VirtualizedContainerService.HintSize="314,68" />
+      <sap2010:ViewStateData Id="Sequence_27" sap:VirtualizedContainerService.HintSize="336,319">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="OnUiElementAppear_21" sap:VirtualizedContainerService.HintSize="414,427">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Parallel_2" sap:VirtualizedContainerService.HintSize="200,51">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="FlowStep_22">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">200,174.5</av:Point>
+            <av:Size x:Key="ShapeSize">200,51</av:Size>
+            <av:PointCollection x:Key="ConnectorLocation">300,225.5 300,255.5 180,255.5 180,144.5 300,144.5 300,174.5</av:PointCollection>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Flowchart_1" sap:VirtualizedContainerService.HintSize="614,693">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <av:Point x:Key="ShapeLocation">270,42.5</av:Point>
+            <av:Size x:Key="ShapeSize">60,75</av:Size>
+            <av:PointCollection x:Key="ConnectorLocation">300,117.5 300,174.5</av:PointCollection>
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Main_1" sap:VirtualizedContainerService.HintSize="654,773" />
+    </sap2010:ViewStateManager>
+  </sap2010:WorkflowViewState.ViewStateManager>
+</Activity>
