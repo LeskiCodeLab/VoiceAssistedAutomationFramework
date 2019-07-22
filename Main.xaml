@@ -45,7 +45,7 @@
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Flowchart sap2010:Annotation.AnnotationText="Important: be sure to add the phrase &quot;robot&quot; to the end of your command otherwise it will not work correctly since we need Cortana to open a search using internet explorer. If Cortana says &quot;sure thing&quot; and then Internet Explorer opens then it will work. But if not then you need to choose a different command until Cortana says &quot;sure thing&quot; and then Internet explorer opens up. The surest way of triggering correctly is to add &quot;robot&quot; at the end of the command. &#xD;&#xA;&#xD;&#xA;If you still have problems I recommend going for a simpler approach. Set the commands to something like &quot;my robot one&quot;, &quot;my robot two&quot; etc. and saying &quot;Hey Cortana, launch my robot one&quot;, &quot;Hey Cortana, launch my robot two&quot; etc.&#xD;&#xA;&#xD;&#xA;Usage: 1. Set the voice command (under variables) it is best to end the command with the phrase &quot;robot&quot; as in the example.&#xD;&#xA;             2, Set the workflow file that you want to be trigger (under variables)&#xA;             2. Run this project.&#xA;             3. Say &quot;Hey Cortana, launch [voice command].&quot; For example &quot;Hey Cortana launch my photo editing robot&quot;" DisplayName="FlowchartMain" sap:VirtualizedContainerService.HintSize="714,828" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+  <Flowchart sap2010:Annotation.AnnotationText="Important: be sure to add the phrase &quot;robot&quot; to the end of your command otherwise it will not work correctly since we need Cortana to open a search using internet explorer. If Cortana says &quot;sure thing&quot; and then Internet Explorer opens then it will work. But if not then you need to choose a different command until Cortana says &quot;sure thing&quot; and then Internet explorer opens up. The surest way of triggering correctly is to add &quot;robot&quot; at the end of the command. &#xA;&#xA;If you still have problems I recommend going for a simpler approach. Set the commands to something like &quot;my robot one&quot;, &quot;my robot two&quot; etc. and saying &quot;Hey Cortana, launch my robot one&quot;, &quot;Hey Cortana, launch my robot two&quot; etc.&#xD;&#xA;&#xD;&#xA;Note: Variables are at FlowchartMain scope.&#xA;&#xA;Usage: 1. Set the voice command (under variables) it is best to end the command with the phrase &quot;robot&quot; as in the example.&#xA;             2, Set the workflow file that you want to trigger (under variables)&#xA;             2. Run this project.&#xA;             3. Say &quot;Hey Cortana, launch [voice command].&quot; For example &quot;Hey Cortana launch my photo editing robot&quot;" DisplayName="FlowchartMain" sap:VirtualizedContainerService.HintSize="714,858" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
       <Variable x:TypeArguments="x:String" Default="my photo editing robot" Name="command1" />
       <Variable x:TypeArguments="x:String" Default="C:\Users\Neo\Documents\UiPath\test\Main.xaml" Name="workflow1" />
@@ -96,7 +96,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
         <TryCatch.Try>
-          <Parallel DisplayName="ParallelVoiceCommands" sap:VirtualizedContainerService.HintSize="7804,1135" sap2010:WorkflowViewState.IdRef="Parallel_3">
+          <Parallel DisplayName="ParallelVoiceCommands" sap:VirtualizedContainerService.HintSize="8940,1071" sap2010:WorkflowViewState.IdRef="Parallel_3">
             <Parallel.Variables>
               <Variable x:TypeArguments="x:Boolean" Default="False" Name="workflow1Exists" />
               <Variable x:TypeArguments="x:Boolean" Default="False" Name="workflow2Exists" />
@@ -114,9 +114,9 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:OnUiElementAppear FoundElement="{x:Null}" ContinueOnError="True" DisplayName="OnElementAppearCommand1" sap:VirtualizedContainerService.HintSize="733,1089" sap2010:WorkflowViewState.IdRef="OnUiElementAppear_23" RepeatForever="True" WaitActive="False" WaitVisible="False">
+            <ui:OnUiElementAppear FoundElement="{x:Null}" ContinueOnError="True" DisplayName="OnElementAppearCommand1" sap:VirtualizedContainerService.HintSize="845,1025" sap2010:WorkflowViewState.IdRef="OnUiElementAppear_23" RepeatForever="True" WaitActive="False" WaitVisible="False">
               <ui:OnUiElementAppear.Body>
-                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="719,981" sap2010:WorkflowViewState.IdRef="Sequence_39">
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="815,917" sap2010:WorkflowViewState.IdRef="Sequence_39">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="x:Boolean" Name="fileExists" />
                   </Sequence.Variables>
@@ -125,18 +125,18 @@
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:LogMessage DisplayName="Log message" sap:VirtualizedContainerService.HintSize="697,91" sap2010:WorkflowViewState.IdRef="LogMessage_11" Level="Info" Message="Command1 has been activated." />
-                  <ui:PathExists DisplayName="Path exists" Exists="[workflow1Exists]" sap:VirtualizedContainerService.HintSize="697,89" sap2010:WorkflowViewState.IdRef="PathExists_1" Path="[workflow1]" PathType="File" />
-                  <If Condition="[workflow1Exists]" sap:VirtualizedContainerService.HintSize="697,489" sap2010:WorkflowViewState.IdRef="If_1">
+                  <ui:LogMessage DisplayName="Log message" sap:VirtualizedContainerService.HintSize="777,91" sap2010:WorkflowViewState.IdRef="LogMessage_11" Level="Info" Message="Command1 has been activated." />
+                  <ui:PathExists DisplayName="Path exists" Exists="[workflow1Exists]" sap:VirtualizedContainerService.HintSize="777,89" sap2010:WorkflowViewState.IdRef="PathExists_1" Path="[workflow1]" PathType="File" />
+                  <If Condition="[workflow1Exists]" sap:VirtualizedContainerService.HintSize="777,457" sap2010:WorkflowViewState.IdRef="If_1">
                     <If.Then>
-                      <Sequence sap:VirtualizedContainerService.HintSize="336,342" sap2010:WorkflowViewState.IdRef="Sequence_49">
+                      <Sequence sap:VirtualizedContainerService.HintSize="368,310" sap2010:WorkflowViewState.IdRef="Sequence_49">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:LogMessage DisplayName="Log message" sap:VirtualizedContainerService.HintSize="314,91" sap2010:WorkflowViewState.IdRef="LogMessage_22" Level="Info" Message="[workflow1 + &quot; exists.&quot;]" />
-                        <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke workflow file" sap:VirtualizedContainerService.HintSize="314,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_18" UnSafe="False" WorkflowFileName="[workflow1]">
+                        <ui:LogMessage DisplayName="Log message" sap:VirtualizedContainerService.HintSize="330,91" sap2010:WorkflowViewState.IdRef="LogMessage_22" Level="Info" Message="[workflow1 + &quot; exists.&quot;]" />
+                        <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke workflow file" sap:VirtualizedContainerService.HintSize="330,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_18" UnSafe="False" WorkflowFileName="[workflow1]">
                           <ui:InvokeWorkflowFile.Arguments>
                             <scg:Dictionary x:TypeArguments="x:String, Argument" />
                           </ui:InvokeWorkflowFile.Arguments>
@@ -144,18 +144,18 @@
                       </Sequence>
                     </If.Then>
                     <If.Else>
-                      <Sequence sap:VirtualizedContainerService.HintSize="336,316" sap2010:WorkflowViewState.IdRef="Sequence_50">
+                      <Sequence sap:VirtualizedContainerService.HintSize="368,284" sap2010:WorkflowViewState.IdRef="Sequence_50">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:LogMessage DisplayName="Log message" sap:VirtualizedContainerService.HintSize="314,91" sap2010:WorkflowViewState.IdRef="LogMessage_23" Level="Info" Message="[workflow1 + &quot; does not exist.&quot;]" />
-                        <WriteLine DisplayName="Write line" sap:VirtualizedContainerService.HintSize="314,61" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[&quot;The worflow file &quot; + workflow1 + &quot; does not exists. Please make sure the path is correct.&quot;]" />
+                        <ui:LogMessage DisplayName="Log message" sap:VirtualizedContainerService.HintSize="330,91" sap2010:WorkflowViewState.IdRef="LogMessage_23" Level="Info" Message="[workflow1 + &quot; does not exist.&quot;]" />
+                        <WriteLine DisplayName="Write line" sap:VirtualizedContainerService.HintSize="330,61" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[&quot;The worflow file &quot; + workflow1 + &quot; does not exists. Please make sure the path is correct.&quot;]" />
                       </Sequence>
                     </If.Else>
                   </If>
-                  <ui:CloseApplication ContinueOnError="True" DisplayName="Close application" sap:VirtualizedContainerService.HintSize="697,68" sap2010:WorkflowViewState.IdRef="CloseApplication_18">
+                  <ui:CloseApplication ContinueOnError="True" DisplayName="Close application" sap:VirtualizedContainerService.HintSize="777,68" sap2010:WorkflowViewState.IdRef="CloseApplication_18">
                     <ui:CloseApplication.Target>
                       <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" Selector="[&quot;&lt;wnd app='applicationframehost.exe' title='launch &quot; + command1 + &quot; - Bing ‎- Microsoft Edge' /&gt;&lt;wnd cls='Windows.UI.Core.CoreWindow' title='Microsoft Edge' /&gt;&quot;]" WaitForReady="INTERACTIVE" />
                     </ui:CloseApplication.Target>
@@ -171,9 +171,9 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:OnUiElementAppear>
-            <ui:OnUiElementAppear FoundElement="{x:Null}" ContinueOnError="True" DisplayName="OnElementAppearCommand2" sap:VirtualizedContainerService.HintSize="733,1089" sap2010:WorkflowViewState.IdRef="OnUiElementAppear_33" RepeatForever="True" WaitActive="False" WaitVisible="False">
+            <ui:OnUiElementAppear FoundElement="{x:Null}" ContinueOnError="True" DisplayName="OnElementAppearCommand2" sap:VirtualizedContainerService.HintSize="845,1025" sap2010:WorkflowViewState.IdRef="OnUiElementAppear_33" RepeatForever="True" WaitActive="False" WaitVisible="False">
               <ui:OnUiElementAppear.Body>
-                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="719,981" sap2010:WorkflowViewState.IdRef="Sequence_53">
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="815,917" sap2010:WorkflowViewState.IdRef="Sequence_53">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="x:Boolean" Name="fileExists" />
                   </Sequence.Variables>
@@ -182,17 +182,17 @@
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:LogMessage DisplayName="Log message" sap:VirtualizedContainerService.HintSize="697,91" sap2010:WorkflowViewState.IdRef="LogMessage_24" Level="Info" Message="Command2 has been activated." />
-                  <ui:PathExists DisplayName="Path exists" Exists="[workflow2Exists]" sap:VirtualizedContainerService.HintSize="697,89" sap2010:WorkflowViewState.IdRef="PathExists_2" Path="[workflow2]" PathType="File" />
-                  <If Condition="[workflow2Exists]" sap:VirtualizedContainerService.HintSize="697,489" sap2010:WorkflowViewState.IdRef="If_2">
+                  <ui:LogMessage DisplayName="Log message" sap:VirtualizedContainerService.HintSize="777,91" sap2010:WorkflowViewState.IdRef="LogMessage_24" Level="Info" Message="Command2 has been activated." />
+                  <ui:PathExists DisplayName="Path exists" Exists="[workflow2Exists]" sap:VirtualizedContainerService.HintSize="777,89" sap2010:WorkflowViewState.IdRef="PathExists_2" Path="[workflow2]" PathType="File" />
+                  <If Condition="[workflow2Exists]" sap:VirtualizedContainerService.HintSize="777,457" sap2010:WorkflowViewState.IdRef="If_2">
                     <If.Then>
-                      <Sequence sap:VirtualizedContainerService.HintSize="336,342" sap2010:WorkflowViewState.IdRef="Sequence_51">
+                      <Sequence sap:VirtualizedContainerService.HintSize="368,310" sap2010:WorkflowViewState.IdRef="Sequence_51">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:LogMessage DisplayName="Log message" sap:VirtualizedContainerService.HintSize="314,91" sap2010:WorkflowViewState.IdRef="LogMessage_25" Level="Info" Message="[workflow2 + &quot; exists.&quot;]" />
+                        <ui:LogMessage DisplayName="Log message" sap:VirtualizedContainerService.HintSize="330,91" sap2010:WorkflowViewState.IdRef="LogMessage_25" Level="Info" Message="[workflow2 + &quot; exists.&quot;]" />
                         <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke workflow file" sap:VirtualizedContainerService.HintSize="314,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_28" UnSafe="False" WorkflowFileName="[workflow2]">
                           <ui:InvokeWorkflowFile.Arguments>
                             <scg:Dictionary x:TypeArguments="x:String, Argument" />
@@ -201,13 +201,13 @@
                       </Sequence>
                     </If.Then>
                     <If.Else>
-                      <Sequence sap:VirtualizedContainerService.HintSize="336,316" sap2010:WorkflowViewState.IdRef="Sequence_52">
+                      <Sequence sap:VirtualizedContainerService.HintSize="368,284" sap2010:WorkflowViewState.IdRef="Sequence_52">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:LogMessage DisplayName="Log message" sap:VirtualizedContainerService.HintSize="314,91" sap2010:WorkflowViewState.IdRef="LogMessage_26" Level="Info" Message="[workflow2 + &quot; does not exist.&quot;]" />
+                        <ui:LogMessage DisplayName="Log message" sap:VirtualizedContainerService.HintSize="330,91" sap2010:WorkflowViewState.IdRef="LogMessage_26" Level="Info" Message="[workflow2 + &quot; does not exist.&quot;]" />
                         <WriteLine DisplayName="Write line" sap:VirtualizedContainerService.HintSize="314,61" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[&quot;The worflow file &quot; + workflow2 + &quot; does not exists. Please make sure the path is correct.&quot;]" />
                       </Sequence>
                     </If.Else>
@@ -228,9 +228,9 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:OnUiElementAppear>
-            <ui:OnUiElementAppear FoundElement="{x:Null}" ContinueOnError="True" DisplayName="OnElementAppearCommand3" sap:VirtualizedContainerService.HintSize="733,1089" sap2010:WorkflowViewState.IdRef="OnUiElementAppear_34" RepeatForever="True" WaitActive="False" WaitVisible="False">
+            <ui:OnUiElementAppear FoundElement="{x:Null}" ContinueOnError="True" DisplayName="OnElementAppearCommand3" sap:VirtualizedContainerService.HintSize="845,1025" sap2010:WorkflowViewState.IdRef="OnUiElementAppear_34" RepeatForever="True" WaitActive="False" WaitVisible="False">
               <ui:OnUiElementAppear.Body>
-                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="719,981" sap2010:WorkflowViewState.IdRef="Sequence_56">
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="815,917" sap2010:WorkflowViewState.IdRef="Sequence_56">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="x:Boolean" Name="fileExists" />
                   </Sequence.Variables>
@@ -239,17 +239,17 @@
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:LogMessage DisplayName="Log message" sap:VirtualizedContainerService.HintSize="697,91" sap2010:WorkflowViewState.IdRef="LogMessage_27" Level="Info" Message="Command3 has been activated." />
-                  <ui:PathExists DisplayName="Path exists" Exists="[workflow3Exists]" sap:VirtualizedContainerService.HintSize="697,89" sap2010:WorkflowViewState.IdRef="PathExists_3" Path="[workflow3]" PathType="File" />
-                  <If Condition="[workflow3Exists]" sap:VirtualizedContainerService.HintSize="697,489" sap2010:WorkflowViewState.IdRef="If_3">
+                  <ui:LogMessage DisplayName="Log message" sap:VirtualizedContainerService.HintSize="777,91" sap2010:WorkflowViewState.IdRef="LogMessage_27" Level="Info" Message="Command3 has been activated." />
+                  <ui:PathExists DisplayName="Path exists" Exists="[workflow3Exists]" sap:VirtualizedContainerService.HintSize="777,89" sap2010:WorkflowViewState.IdRef="PathExists_3" Path="[workflow3]" PathType="File" />
+                  <If Condition="[workflow3Exists]" sap:VirtualizedContainerService.HintSize="777,457" sap2010:WorkflowViewState.IdRef="If_3">
                     <If.Then>
-                      <Sequence sap:VirtualizedContainerService.HintSize="336,342" sap2010:WorkflowViewState.IdRef="Sequence_54">
+                      <Sequence sap:VirtualizedContainerService.HintSize="368,310" sap2010:WorkflowViewState.IdRef="Sequence_54">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:LogMessage DisplayName="Log message" sap:VirtualizedContainerService.HintSize="314,91" sap2010:WorkflowViewState.IdRef="LogMessage_28" Level="Info" Message="[workflow3 + &quot; exists.&quot;]" />
+                        <ui:LogMessage DisplayName="Log message" sap:VirtualizedContainerService.HintSize="330,91" sap2010:WorkflowViewState.IdRef="LogMessage_28" Level="Info" Message="[workflow3 + &quot; exists.&quot;]" />
                         <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke workflow file" sap:VirtualizedContainerService.HintSize="314,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_29" UnSafe="False" WorkflowFileName="[workflow3]">
                           <ui:InvokeWorkflowFile.Arguments>
                             <scg:Dictionary x:TypeArguments="x:String, Argument" />
@@ -258,13 +258,13 @@
                       </Sequence>
                     </If.Then>
                     <If.Else>
-                      <Sequence sap:VirtualizedContainerService.HintSize="336,316" sap2010:WorkflowViewState.IdRef="Sequence_55">
+                      <Sequence sap:VirtualizedContainerService.HintSize="368,284" sap2010:WorkflowViewState.IdRef="Sequence_55">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:LogMessage DisplayName="Log message" sap:VirtualizedContainerService.HintSize="314,91" sap2010:WorkflowViewState.IdRef="LogMessage_29" Level="Info" Message="[workflow3 + &quot; does not exist.&quot;]" />
+                        <ui:LogMessage DisplayName="Log message" sap:VirtualizedContainerService.HintSize="330,91" sap2010:WorkflowViewState.IdRef="LogMessage_29" Level="Info" Message="[workflow3 + &quot; does not exist.&quot;]" />
                         <WriteLine DisplayName="Write line" sap:VirtualizedContainerService.HintSize="314,61" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="[&quot;The worflow file &quot; + workflow3 + &quot; does not exists. Please make sure the path is correct.&quot;]" />
                       </Sequence>
                     </If.Else>
@@ -285,9 +285,9 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:OnUiElementAppear>
-            <ui:OnUiElementAppear FoundElement="{x:Null}" ContinueOnError="True" DisplayName="OnElementAppearCommand4" sap:VirtualizedContainerService.HintSize="733,1089" sap2010:WorkflowViewState.IdRef="OnUiElementAppear_35" RepeatForever="True" WaitActive="False" WaitVisible="False">
+            <ui:OnUiElementAppear FoundElement="{x:Null}" ContinueOnError="True" DisplayName="OnElementAppearCommand4" sap:VirtualizedContainerService.HintSize="845,1025" sap2010:WorkflowViewState.IdRef="OnUiElementAppear_35" RepeatForever="True" WaitActive="False" WaitVisible="False">
               <ui:OnUiElementAppear.Body>
-                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="719,981" sap2010:WorkflowViewState.IdRef="Sequence_59">
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="815,917" sap2010:WorkflowViewState.IdRef="Sequence_59">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="x:Boolean" Name="fileExists" />
                   </Sequence.Variables>
@@ -296,17 +296,17 @@
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:LogMessage DisplayName="Log message" sap:VirtualizedContainerService.HintSize="697,91" sap2010:WorkflowViewState.IdRef="LogMessage_30" Level="Info" Message="Command4 has been activated." />
-                  <ui:PathExists DisplayName="Path exists" Exists="[workflow4Exists]" sap:VirtualizedContainerService.HintSize="697,89" sap2010:WorkflowViewState.IdRef="PathExists_4" Path="[workflow4]" PathType="File" />
-                  <If Condition="[workflow4Exists]" sap:VirtualizedContainerService.HintSize="697,489" sap2010:WorkflowViewState.IdRef="If_4">
+                  <ui:LogMessage DisplayName="Log message" sap:VirtualizedContainerService.HintSize="777,91" sap2010:WorkflowViewState.IdRef="LogMessage_30" Level="Info" Message="Command4 has been activated." />
+                  <ui:PathExists DisplayName="Path exists" Exists="[workflow4Exists]" sap:VirtualizedContainerService.HintSize="777,89" sap2010:WorkflowViewState.IdRef="PathExists_4" Path="[workflow4]" PathType="File" />
+                  <If Condition="[workflow4Exists]" sap:VirtualizedContainerService.HintSize="777,457" sap2010:WorkflowViewState.IdRef="If_4">
                     <If.Then>
-                      <Sequence sap:VirtualizedContainerService.HintSize="336,342" sap2010:WorkflowViewState.IdRef="Sequence_57">
+                      <Sequence sap:VirtualizedContainerService.HintSize="368,310" sap2010:WorkflowViewState.IdRef="Sequence_57">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:LogMessage DisplayName="Log message" sap:VirtualizedContainerService.HintSize="314,91" sap2010:WorkflowViewState.IdRef="LogMessage_31" Level="Info" Message="[workflow4 + &quot; exists.&quot;]" />
+                        <ui:LogMessage DisplayName="Log message" sap:VirtualizedContainerService.HintSize="330,91" sap2010:WorkflowViewState.IdRef="LogMessage_31" Level="Info" Message="[workflow4 + &quot; exists.&quot;]" />
                         <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke workflow file" sap:VirtualizedContainerService.HintSize="314,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_30" UnSafe="False" WorkflowFileName="[workflow4]">
                           <ui:InvokeWorkflowFile.Arguments>
                             <scg:Dictionary x:TypeArguments="x:String, Argument" />
@@ -315,13 +315,13 @@
                       </Sequence>
                     </If.Then>
                     <If.Else>
-                      <Sequence sap:VirtualizedContainerService.HintSize="336,316" sap2010:WorkflowViewState.IdRef="Sequence_58">
+                      <Sequence sap:VirtualizedContainerService.HintSize="368,284" sap2010:WorkflowViewState.IdRef="Sequence_58">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:LogMessage DisplayName="Log message" sap:VirtualizedContainerService.HintSize="314,91" sap2010:WorkflowViewState.IdRef="LogMessage_32" Level="Info" Message="[workflow4 + &quot; does not exist.&quot;]" />
+                        <ui:LogMessage DisplayName="Log message" sap:VirtualizedContainerService.HintSize="330,91" sap2010:WorkflowViewState.IdRef="LogMessage_32" Level="Info" Message="[workflow4 + &quot; does not exist.&quot;]" />
                         <WriteLine DisplayName="Write line" sap:VirtualizedContainerService.HintSize="314,61" sap2010:WorkflowViewState.IdRef="WriteLine_4" Text="[&quot;The worflow file &quot; + workflow4 + &quot; does not exists. Please make sure the path is correct.&quot;]" />
                       </Sequence>
                     </If.Else>
@@ -342,9 +342,9 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:OnUiElementAppear>
-            <ui:OnUiElementAppear FoundElement="{x:Null}" ContinueOnError="True" DisplayName="OnElementAppearCommand5" sap:VirtualizedContainerService.HintSize="733,1089" sap2010:WorkflowViewState.IdRef="OnUiElementAppear_36" RepeatForever="True" WaitActive="False" WaitVisible="False">
+            <ui:OnUiElementAppear FoundElement="{x:Null}" ContinueOnError="True" DisplayName="OnElementAppearCommand5" sap:VirtualizedContainerService.HintSize="845,1025" sap2010:WorkflowViewState.IdRef="OnUiElementAppear_36" RepeatForever="True" WaitActive="False" WaitVisible="False">
               <ui:OnUiElementAppear.Body>
-                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="719,981" sap2010:WorkflowViewState.IdRef="Sequence_62">
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="815,917" sap2010:WorkflowViewState.IdRef="Sequence_62">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="x:Boolean" Name="fileExists" />
                   </Sequence.Variables>
@@ -353,17 +353,17 @@
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:LogMessage DisplayName="Log message" sap:VirtualizedContainerService.HintSize="697,91" sap2010:WorkflowViewState.IdRef="LogMessage_33" Level="Info" Message="Command5 has been activated." />
-                  <ui:PathExists DisplayName="Path exists" Exists="[workflow5Exists]" sap:VirtualizedContainerService.HintSize="697,89" sap2010:WorkflowViewState.IdRef="PathExists_5" Path="[workflow5]" PathType="File" />
-                  <If Condition="[workflow5Exists]" sap:VirtualizedContainerService.HintSize="697,489" sap2010:WorkflowViewState.IdRef="If_5">
+                  <ui:LogMessage DisplayName="Log message" sap:VirtualizedContainerService.HintSize="777,91" sap2010:WorkflowViewState.IdRef="LogMessage_33" Level="Info" Message="Command5 has been activated." />
+                  <ui:PathExists DisplayName="Path exists" Exists="[workflow5Exists]" sap:VirtualizedContainerService.HintSize="777,89" sap2010:WorkflowViewState.IdRef="PathExists_5" Path="[workflow5]" PathType="File" />
+                  <If Condition="[workflow5Exists]" sap:VirtualizedContainerService.HintSize="777,457" sap2010:WorkflowViewState.IdRef="If_5">
                     <If.Then>
-                      <Sequence sap:VirtualizedContainerService.HintSize="336,342" sap2010:WorkflowViewState.IdRef="Sequence_60">
+                      <Sequence sap:VirtualizedContainerService.HintSize="368,310" sap2010:WorkflowViewState.IdRef="Sequence_60">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:LogMessage DisplayName="Log message" sap:VirtualizedContainerService.HintSize="314,91" sap2010:WorkflowViewState.IdRef="LogMessage_34" Level="Info" Message="[workflow5 + &quot; exists.&quot;]" />
+                        <ui:LogMessage DisplayName="Log message" sap:VirtualizedContainerService.HintSize="330,91" sap2010:WorkflowViewState.IdRef="LogMessage_34" Level="Info" Message="[workflow5 + &quot; exists.&quot;]" />
                         <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke workflow file" sap:VirtualizedContainerService.HintSize="314,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_31" UnSafe="False" WorkflowFileName="[workflow5]">
                           <ui:InvokeWorkflowFile.Arguments>
                             <scg:Dictionary x:TypeArguments="x:String, Argument" />
@@ -372,13 +372,13 @@
                       </Sequence>
                     </If.Then>
                     <If.Else>
-                      <Sequence sap:VirtualizedContainerService.HintSize="336,316" sap2010:WorkflowViewState.IdRef="Sequence_61">
+                      <Sequence sap:VirtualizedContainerService.HintSize="368,284" sap2010:WorkflowViewState.IdRef="Sequence_61">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:LogMessage DisplayName="Log message" sap:VirtualizedContainerService.HintSize="314,91" sap2010:WorkflowViewState.IdRef="LogMessage_35" Level="Info" Message="[workflow5 + &quot; does not exist.&quot;]" />
+                        <ui:LogMessage DisplayName="Log message" sap:VirtualizedContainerService.HintSize="330,91" sap2010:WorkflowViewState.IdRef="LogMessage_35" Level="Info" Message="[workflow5 + &quot; does not exist.&quot;]" />
                         <WriteLine DisplayName="Write line" sap:VirtualizedContainerService.HintSize="314,61" sap2010:WorkflowViewState.IdRef="WriteLine_5" Text="[&quot;The worflow file &quot; + workflow5 + &quot; does not exists. Please make sure the path is correct.&quot;]" />
                       </Sequence>
                     </If.Else>
@@ -399,9 +399,9 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:OnUiElementAppear>
-            <ui:OnUiElementAppear FoundElement="{x:Null}" ContinueOnError="True" DisplayName="OnElementAppearCommand6" sap:VirtualizedContainerService.HintSize="733,1089" sap2010:WorkflowViewState.IdRef="OnUiElementAppear_37" RepeatForever="True" WaitActive="False" WaitVisible="False">
+            <ui:OnUiElementAppear FoundElement="{x:Null}" ContinueOnError="True" DisplayName="OnElementAppearCommand6" sap:VirtualizedContainerService.HintSize="845,1025" sap2010:WorkflowViewState.IdRef="OnUiElementAppear_37" RepeatForever="True" WaitActive="False" WaitVisible="False">
               <ui:OnUiElementAppear.Body>
-                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="719,981" sap2010:WorkflowViewState.IdRef="Sequence_65">
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="815,917" sap2010:WorkflowViewState.IdRef="Sequence_65">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="x:Boolean" Name="fileExists" />
                   </Sequence.Variables>
@@ -410,17 +410,17 @@
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:LogMessage DisplayName="Log message" sap:VirtualizedContainerService.HintSize="697,91" sap2010:WorkflowViewState.IdRef="LogMessage_36" Level="Info" Message="Command6 has been activated." />
-                  <ui:PathExists DisplayName="Path exists" Exists="[workflow6Exists]" sap:VirtualizedContainerService.HintSize="697,89" sap2010:WorkflowViewState.IdRef="PathExists_6" Path="[workflow6]" PathType="File" />
-                  <If Condition="[workflow6Exists]" sap:VirtualizedContainerService.HintSize="697,489" sap2010:WorkflowViewState.IdRef="If_6">
+                  <ui:LogMessage DisplayName="Log message" sap:VirtualizedContainerService.HintSize="777,91" sap2010:WorkflowViewState.IdRef="LogMessage_36" Level="Info" Message="Command6 has been activated." />
+                  <ui:PathExists DisplayName="Path exists" Exists="[workflow6Exists]" sap:VirtualizedContainerService.HintSize="777,89" sap2010:WorkflowViewState.IdRef="PathExists_6" Path="[workflow6]" PathType="File" />
+                  <If Condition="[workflow6Exists]" sap:VirtualizedContainerService.HintSize="777,457" sap2010:WorkflowViewState.IdRef="If_6">
                     <If.Then>
-                      <Sequence sap:VirtualizedContainerService.HintSize="336,342" sap2010:WorkflowViewState.IdRef="Sequence_63">
+                      <Sequence sap:VirtualizedContainerService.HintSize="368,310" sap2010:WorkflowViewState.IdRef="Sequence_63">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:LogMessage DisplayName="Log message" sap:VirtualizedContainerService.HintSize="314,91" sap2010:WorkflowViewState.IdRef="LogMessage_37" Level="Info" Message="[workflow6 + &quot; exists.&quot;]" />
+                        <ui:LogMessage DisplayName="Log message" sap:VirtualizedContainerService.HintSize="330,91" sap2010:WorkflowViewState.IdRef="LogMessage_37" Level="Info" Message="[workflow6 + &quot; exists.&quot;]" />
                         <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke workflow file" sap:VirtualizedContainerService.HintSize="314,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_32" UnSafe="False" WorkflowFileName="[workflow6]">
                           <ui:InvokeWorkflowFile.Arguments>
                             <scg:Dictionary x:TypeArguments="x:String, Argument" />
@@ -429,13 +429,13 @@
                       </Sequence>
                     </If.Then>
                     <If.Else>
-                      <Sequence sap:VirtualizedContainerService.HintSize="336,316" sap2010:WorkflowViewState.IdRef="Sequence_64">
+                      <Sequence sap:VirtualizedContainerService.HintSize="368,284" sap2010:WorkflowViewState.IdRef="Sequence_64">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:LogMessage DisplayName="Log message" sap:VirtualizedContainerService.HintSize="314,91" sap2010:WorkflowViewState.IdRef="LogMessage_38" Level="Info" Message="[workflow6 + &quot; does not exist.&quot;]" />
+                        <ui:LogMessage DisplayName="Log message" sap:VirtualizedContainerService.HintSize="330,91" sap2010:WorkflowViewState.IdRef="LogMessage_38" Level="Info" Message="[workflow6 + &quot; does not exist.&quot;]" />
                         <WriteLine DisplayName="Write line" sap:VirtualizedContainerService.HintSize="314,61" sap2010:WorkflowViewState.IdRef="WriteLine_6" Text="[&quot;The worflow file &quot; + workflow6 + &quot; does not exists. Please make sure the path is correct.&quot;]" />
                       </Sequence>
                     </If.Else>
@@ -456,9 +456,9 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:OnUiElementAppear>
-            <ui:OnUiElementAppear FoundElement="{x:Null}" ContinueOnError="True" DisplayName="OnElementAppearCommand7" sap:VirtualizedContainerService.HintSize="733,1089" sap2010:WorkflowViewState.IdRef="OnUiElementAppear_38" RepeatForever="True" WaitActive="False" WaitVisible="False">
+            <ui:OnUiElementAppear FoundElement="{x:Null}" ContinueOnError="True" DisplayName="OnElementAppearCommand7" sap:VirtualizedContainerService.HintSize="845,1025" sap2010:WorkflowViewState.IdRef="OnUiElementAppear_38" RepeatForever="True" WaitActive="False" WaitVisible="False">
               <ui:OnUiElementAppear.Body>
-                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="719,981" sap2010:WorkflowViewState.IdRef="Sequence_68">
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="815,917" sap2010:WorkflowViewState.IdRef="Sequence_68">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="x:Boolean" Name="fileExists" />
                   </Sequence.Variables>
@@ -467,17 +467,17 @@
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:LogMessage DisplayName="Log message" sap:VirtualizedContainerService.HintSize="697,91" sap2010:WorkflowViewState.IdRef="LogMessage_39" Level="Info" Message="Command7 has been activated." />
-                  <ui:PathExists DisplayName="Path exists" Exists="[workflow7Exists]" sap:VirtualizedContainerService.HintSize="697,89" sap2010:WorkflowViewState.IdRef="PathExists_7" Path="[workflow7]" PathType="File" />
-                  <If Condition="[workflow7Exists]" sap:VirtualizedContainerService.HintSize="697,489" sap2010:WorkflowViewState.IdRef="If_7">
+                  <ui:LogMessage DisplayName="Log message" sap:VirtualizedContainerService.HintSize="777,91" sap2010:WorkflowViewState.IdRef="LogMessage_39" Level="Info" Message="Command7 has been activated." />
+                  <ui:PathExists DisplayName="Path exists" Exists="[workflow7Exists]" sap:VirtualizedContainerService.HintSize="777,89" sap2010:WorkflowViewState.IdRef="PathExists_7" Path="[workflow7]" PathType="File" />
+                  <If Condition="[workflow7Exists]" sap:VirtualizedContainerService.HintSize="777,457" sap2010:WorkflowViewState.IdRef="If_7">
                     <If.Then>
-                      <Sequence sap:VirtualizedContainerService.HintSize="336,342" sap2010:WorkflowViewState.IdRef="Sequence_66">
+                      <Sequence sap:VirtualizedContainerService.HintSize="368,310" sap2010:WorkflowViewState.IdRef="Sequence_66">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:LogMessage DisplayName="Log message" sap:VirtualizedContainerService.HintSize="314,91" sap2010:WorkflowViewState.IdRef="LogMessage_40" Level="Info" Message="[workflow7 + &quot; exists.&quot;]" />
+                        <ui:LogMessage DisplayName="Log message" sap:VirtualizedContainerService.HintSize="330,91" sap2010:WorkflowViewState.IdRef="LogMessage_40" Level="Info" Message="[workflow7 + &quot; exists.&quot;]" />
                         <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke workflow file" sap:VirtualizedContainerService.HintSize="314,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_33" UnSafe="False" WorkflowFileName="[workflow7]">
                           <ui:InvokeWorkflowFile.Arguments>
                             <scg:Dictionary x:TypeArguments="x:String, Argument" />
@@ -486,13 +486,13 @@
                       </Sequence>
                     </If.Then>
                     <If.Else>
-                      <Sequence sap:VirtualizedContainerService.HintSize="336,316" sap2010:WorkflowViewState.IdRef="Sequence_67">
+                      <Sequence sap:VirtualizedContainerService.HintSize="368,284" sap2010:WorkflowViewState.IdRef="Sequence_67">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:LogMessage DisplayName="Log message" sap:VirtualizedContainerService.HintSize="314,91" sap2010:WorkflowViewState.IdRef="LogMessage_41" Level="Info" Message="[workflow7 + &quot; does not exist.&quot;]" />
+                        <ui:LogMessage DisplayName="Log message" sap:VirtualizedContainerService.HintSize="330,91" sap2010:WorkflowViewState.IdRef="LogMessage_41" Level="Info" Message="[workflow7 + &quot; does not exist.&quot;]" />
                         <WriteLine DisplayName="Write line" sap:VirtualizedContainerService.HintSize="314,61" sap2010:WorkflowViewState.IdRef="WriteLine_7" Text="[&quot;The worflow file &quot; + workflow7 + &quot; does not exists. Please make sure the path is correct.&quot;]" />
                       </Sequence>
                     </If.Else>
@@ -513,9 +513,9 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:OnUiElementAppear>
-            <ui:OnUiElementAppear FoundElement="{x:Null}" ContinueOnError="True" DisplayName="OnElementAppearCommand8" sap:VirtualizedContainerService.HintSize="733,1089" sap2010:WorkflowViewState.IdRef="OnUiElementAppear_39" RepeatForever="True" WaitActive="False" WaitVisible="False">
+            <ui:OnUiElementAppear FoundElement="{x:Null}" ContinueOnError="True" DisplayName="OnElementAppearCommand8" sap:VirtualizedContainerService.HintSize="845,1025" sap2010:WorkflowViewState.IdRef="OnUiElementAppear_39" RepeatForever="True" WaitActive="False" WaitVisible="False">
               <ui:OnUiElementAppear.Body>
-                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="719,981" sap2010:WorkflowViewState.IdRef="Sequence_71">
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="815,917" sap2010:WorkflowViewState.IdRef="Sequence_71">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="x:Boolean" Name="fileExists" />
                   </Sequence.Variables>
@@ -524,17 +524,17 @@
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:LogMessage DisplayName="Log message" sap:VirtualizedContainerService.HintSize="697,91" sap2010:WorkflowViewState.IdRef="LogMessage_42" Level="Info" Message="Command8 has been activated." />
-                  <ui:PathExists DisplayName="Path exists" Exists="[workflow8Exists]" sap:VirtualizedContainerService.HintSize="697,89" sap2010:WorkflowViewState.IdRef="PathExists_8" Path="[workflow8]" PathType="File" />
-                  <If Condition="[workflow8Exists]" sap:VirtualizedContainerService.HintSize="697,489" sap2010:WorkflowViewState.IdRef="If_8">
+                  <ui:LogMessage DisplayName="Log message" sap:VirtualizedContainerService.HintSize="777,91" sap2010:WorkflowViewState.IdRef="LogMessage_42" Level="Info" Message="Command8 has been activated." />
+                  <ui:PathExists DisplayName="Path exists" Exists="[workflow8Exists]" sap:VirtualizedContainerService.HintSize="777,89" sap2010:WorkflowViewState.IdRef="PathExists_8" Path="[workflow8]" PathType="File" />
+                  <If Condition="[workflow8Exists]" sap:VirtualizedContainerService.HintSize="777,457" sap2010:WorkflowViewState.IdRef="If_8">
                     <If.Then>
-                      <Sequence sap:VirtualizedContainerService.HintSize="336,342" sap2010:WorkflowViewState.IdRef="Sequence_69">
+                      <Sequence sap:VirtualizedContainerService.HintSize="368,310" sap2010:WorkflowViewState.IdRef="Sequence_69">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:LogMessage DisplayName="Log message" sap:VirtualizedContainerService.HintSize="314,91" sap2010:WorkflowViewState.IdRef="LogMessage_43" Level="Info" Message="[workflow8 + &quot; exists.&quot;]" />
+                        <ui:LogMessage DisplayName="Log message" sap:VirtualizedContainerService.HintSize="330,91" sap2010:WorkflowViewState.IdRef="LogMessage_43" Level="Info" Message="[workflow8 + &quot; exists.&quot;]" />
                         <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke workflow file" sap:VirtualizedContainerService.HintSize="314,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_34" UnSafe="False" WorkflowFileName="[workflow8]">
                           <ui:InvokeWorkflowFile.Arguments>
                             <scg:Dictionary x:TypeArguments="x:String, Argument" />
@@ -543,13 +543,13 @@
                       </Sequence>
                     </If.Then>
                     <If.Else>
-                      <Sequence sap:VirtualizedContainerService.HintSize="336,316" sap2010:WorkflowViewState.IdRef="Sequence_70">
+                      <Sequence sap:VirtualizedContainerService.HintSize="368,284" sap2010:WorkflowViewState.IdRef="Sequence_70">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:LogMessage DisplayName="Log message" sap:VirtualizedContainerService.HintSize="314,91" sap2010:WorkflowViewState.IdRef="LogMessage_44" Level="Info" Message="[workflow8 + &quot; does not exist.&quot;]" />
+                        <ui:LogMessage DisplayName="Log message" sap:VirtualizedContainerService.HintSize="330,91" sap2010:WorkflowViewState.IdRef="LogMessage_44" Level="Info" Message="[workflow8 + &quot; does not exist.&quot;]" />
                         <WriteLine DisplayName="Write line" sap:VirtualizedContainerService.HintSize="314,61" sap2010:WorkflowViewState.IdRef="WriteLine_8" Text="[&quot;The worflow file &quot; + workflow8 + &quot; does not exists. Please make sure the path is correct.&quot;]" />
                       </Sequence>
                     </If.Else>
@@ -570,9 +570,9 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:OnUiElementAppear>
-            <ui:OnUiElementAppear FoundElement="{x:Null}" ContinueOnError="True" DisplayName="OnElementAppearCommand9" sap:VirtualizedContainerService.HintSize="733,1089" sap2010:WorkflowViewState.IdRef="OnUiElementAppear_40" RepeatForever="True" WaitActive="False" WaitVisible="False">
+            <ui:OnUiElementAppear FoundElement="{x:Null}" ContinueOnError="True" DisplayName="OnElementAppearCommand9" sap:VirtualizedContainerService.HintSize="845,1025" sap2010:WorkflowViewState.IdRef="OnUiElementAppear_40" RepeatForever="True" WaitActive="False" WaitVisible="False">
               <ui:OnUiElementAppear.Body>
-                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="719,981" sap2010:WorkflowViewState.IdRef="Sequence_74">
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="815,917" sap2010:WorkflowViewState.IdRef="Sequence_74">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="x:Boolean" Name="fileExists" />
                   </Sequence.Variables>
@@ -581,17 +581,17 @@
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:LogMessage DisplayName="Log message" sap:VirtualizedContainerService.HintSize="697,91" sap2010:WorkflowViewState.IdRef="LogMessage_45" Level="Info" Message="Command9 has been activated." />
-                  <ui:PathExists DisplayName="Path exists" Exists="[workflow9Exists]" sap:VirtualizedContainerService.HintSize="697,89" sap2010:WorkflowViewState.IdRef="PathExists_9" Path="[workflow9]" PathType="File" />
-                  <If Condition="[workflow9Exists]" sap:VirtualizedContainerService.HintSize="697,489" sap2010:WorkflowViewState.IdRef="If_9">
+                  <ui:LogMessage DisplayName="Log message" sap:VirtualizedContainerService.HintSize="777,91" sap2010:WorkflowViewState.IdRef="LogMessage_45" Level="Info" Message="Command9 has been activated." />
+                  <ui:PathExists DisplayName="Path exists" Exists="[workflow9Exists]" sap:VirtualizedContainerService.HintSize="777,89" sap2010:WorkflowViewState.IdRef="PathExists_9" Path="[workflow9]" PathType="File" />
+                  <If Condition="[workflow9Exists]" sap:VirtualizedContainerService.HintSize="777,457" sap2010:WorkflowViewState.IdRef="If_9">
                     <If.Then>
-                      <Sequence sap:VirtualizedContainerService.HintSize="336,342" sap2010:WorkflowViewState.IdRef="Sequence_72">
+                      <Sequence sap:VirtualizedContainerService.HintSize="368,310" sap2010:WorkflowViewState.IdRef="Sequence_72">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:LogMessage DisplayName="Log message" sap:VirtualizedContainerService.HintSize="314,91" sap2010:WorkflowViewState.IdRef="LogMessage_46" Level="Info" Message="[workflow9 + &quot; exists.&quot;]" />
+                        <ui:LogMessage DisplayName="Log message" sap:VirtualizedContainerService.HintSize="330,91" sap2010:WorkflowViewState.IdRef="LogMessage_46" Level="Info" Message="[workflow9 + &quot; exists.&quot;]" />
                         <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke workflow file" sap:VirtualizedContainerService.HintSize="314,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_35" UnSafe="False" WorkflowFileName="[workflow9]">
                           <ui:InvokeWorkflowFile.Arguments>
                             <scg:Dictionary x:TypeArguments="x:String, Argument" />
@@ -600,13 +600,13 @@
                       </Sequence>
                     </If.Then>
                     <If.Else>
-                      <Sequence sap:VirtualizedContainerService.HintSize="336,316" sap2010:WorkflowViewState.IdRef="Sequence_73">
+                      <Sequence sap:VirtualizedContainerService.HintSize="368,284" sap2010:WorkflowViewState.IdRef="Sequence_73">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:LogMessage DisplayName="Log message" sap:VirtualizedContainerService.HintSize="314,91" sap2010:WorkflowViewState.IdRef="LogMessage_47" Level="Info" Message="[workflow9 + &quot; does not exist.&quot;]" />
+                        <ui:LogMessage DisplayName="Log message" sap:VirtualizedContainerService.HintSize="330,91" sap2010:WorkflowViewState.IdRef="LogMessage_47" Level="Info" Message="[workflow9 + &quot; does not exist.&quot;]" />
                         <WriteLine DisplayName="Write line" sap:VirtualizedContainerService.HintSize="314,61" sap2010:WorkflowViewState.IdRef="WriteLine_9" Text="[&quot;The worflow file &quot; + workflow9 + &quot; does not exists. Please make sure the path is correct.&quot;]" />
                       </Sequence>
                     </If.Else>
@@ -627,25 +627,25 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:OnUiElementAppear>
-            <ui:OnUiElementAppear FoundElement="{x:Null}" ContinueOnError="True" DisplayName="OnElementAppearCommand10" sap:VirtualizedContainerService.HintSize="733,1089" sap2010:WorkflowViewState.IdRef="OnUiElementAppear_41" RepeatForever="True" WaitActive="False" WaitVisible="False">
+            <ui:OnUiElementAppear FoundElement="{x:Null}" ContinueOnError="True" DisplayName="OnElementAppearCommand10" sap:VirtualizedContainerService.HintSize="845,1025" sap2010:WorkflowViewState.IdRef="OnUiElementAppear_41" RepeatForever="True" WaitActive="False" WaitVisible="False">
               <ui:OnUiElementAppear.Body>
-                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="719,981" sap2010:WorkflowViewState.IdRef="Sequence_77">
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="815,917" sap2010:WorkflowViewState.IdRef="Sequence_77">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:LogMessage DisplayName="Log message" sap:VirtualizedContainerService.HintSize="697,91" sap2010:WorkflowViewState.IdRef="LogMessage_48" Level="Info" Message="Command10 has been activated." />
-                  <ui:PathExists DisplayName="Path exists" Exists="[workflow10Exists]" sap:VirtualizedContainerService.HintSize="697,89" sap2010:WorkflowViewState.IdRef="PathExists_10" Path="[workflow10]" PathType="File" />
-                  <If Condition="[workflow10Exists]" sap:VirtualizedContainerService.HintSize="697,489" sap2010:WorkflowViewState.IdRef="If_10">
+                  <ui:LogMessage DisplayName="Log message" sap:VirtualizedContainerService.HintSize="777,91" sap2010:WorkflowViewState.IdRef="LogMessage_48" Level="Info" Message="Command10 has been activated." />
+                  <ui:PathExists DisplayName="Path exists" Exists="[workflow10Exists]" sap:VirtualizedContainerService.HintSize="777,89" sap2010:WorkflowViewState.IdRef="PathExists_10" Path="[workflow10]" PathType="File" />
+                  <If Condition="[workflow10Exists]" sap:VirtualizedContainerService.HintSize="777,457" sap2010:WorkflowViewState.IdRef="If_10">
                     <If.Then>
-                      <Sequence sap:VirtualizedContainerService.HintSize="336,342" sap2010:WorkflowViewState.IdRef="Sequence_75">
+                      <Sequence sap:VirtualizedContainerService.HintSize="368,310" sap2010:WorkflowViewState.IdRef="Sequence_75">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:LogMessage DisplayName="Log message" sap:VirtualizedContainerService.HintSize="314,91" sap2010:WorkflowViewState.IdRef="LogMessage_49" Level="Info" Message="[workflow10 + &quot; exists.&quot;]" />
+                        <ui:LogMessage DisplayName="Log message" sap:VirtualizedContainerService.HintSize="330,91" sap2010:WorkflowViewState.IdRef="LogMessage_49" Level="Info" Message="[workflow10 + &quot; exists.&quot;]" />
                         <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke workflow file" sap:VirtualizedContainerService.HintSize="314,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_36" UnSafe="False" WorkflowFileName="[workflow10]">
                           <ui:InvokeWorkflowFile.Arguments>
                             <scg:Dictionary x:TypeArguments="x:String, Argument" />
@@ -654,13 +654,13 @@
                       </Sequence>
                     </If.Then>
                     <If.Else>
-                      <Sequence sap:VirtualizedContainerService.HintSize="336,316" sap2010:WorkflowViewState.IdRef="Sequence_76">
+                      <Sequence sap:VirtualizedContainerService.HintSize="368,284" sap2010:WorkflowViewState.IdRef="Sequence_76">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:LogMessage DisplayName="Log message" sap:VirtualizedContainerService.HintSize="314,91" sap2010:WorkflowViewState.IdRef="LogMessage_50" Level="Info" Message="[workflow10 + &quot; does not exist.&quot;]" />
+                        <ui:LogMessage DisplayName="Log message" sap:VirtualizedContainerService.HintSize="330,91" sap2010:WorkflowViewState.IdRef="LogMessage_50" Level="Info" Message="[workflow10 + &quot; does not exist.&quot;]" />
                         <WriteLine DisplayName="Write line" sap:VirtualizedContainerService.HintSize="314,61" sap2010:WorkflowViewState.IdRef="WriteLine_10" Text="[&quot;The worflow file &quot; + workflow10 + &quot; does not exists. Please make sure the path is correct.&quot;]" />
                       </Sequence>
                     </If.Else>
@@ -684,7 +684,7 @@
           </Parallel>
         </TryCatch.Try>
         <TryCatch.Catches>
-          <Catch x:TypeArguments="s:InvalidOperationException" sap:VirtualizedContainerService.HintSize="7808,21" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+          <Catch x:TypeArguments="s:InvalidOperationException" sap:VirtualizedContainerService.HintSize="8944,21" sap2010:WorkflowViewState.IdRef="Catch`1_1">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>

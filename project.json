@@ -3,9 +3,6 @@
   "description": "Blank Project",
   "main": "Main.xaml",
   "dependencies": {
-    "UiPath.Excel.Activities": "[2.6.2]",
-    "UiPath.GoogleSpeech.Activities": "[0.1.6850.39757]",
-    "UiPath.Mail.Activities": "[1.5.1]",
     "UiPath.System.Activities": "[18.3.6897.22524]",
     "UiPath.UIAutomation.Activities": "[18.3.6897.22543]"
   },
